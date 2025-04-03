@@ -10,6 +10,7 @@ const UserPrompt = ({ sumbitPrompt }: UserPromptProps) => {
 
   const handleSubmit = () => {
     sumbitPrompt(prompt);
+    setPrompt("");
   };
 
   const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
@@ -26,6 +27,7 @@ const UserPrompt = ({ sumbitPrompt }: UserPromptProps) => {
         placeholder="e.g. Paris"
         onChange={(e) => handleChange(e)}
         onKeyDown={(e) => handleKeyDown(e)}
+        value={prompt ? prompt : ""}
       />
       <button
         className="border border-white size-[30px] max-w-[60px] p-2 rounded-full text-white cursor-pointer hover:border-gray-200 flex justify-center items-center flex-1/3 hover:bg-white hover:text-emerald-300 font-bold text-xl"
