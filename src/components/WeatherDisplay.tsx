@@ -3,7 +3,6 @@ import { WeatherDisplayProps } from "../types/types";
 import { getCorrectValue } from "../utils";
 
 const WeatherDisplay = ({ weatherData }: WeatherDisplayProps) => {
-  console.log(weatherData?.currentConditions?.temp);
   return (
     <div className="flex flex-col justify-start gap-5 rounded-xl p-10 w-[500px] bg-white mt-30">
       {weatherDetails.map((detail, i) => {
