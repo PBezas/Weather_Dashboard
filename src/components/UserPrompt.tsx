@@ -13,7 +13,7 @@ const UserPrompt = ({ sumbitPrompt }: UserPromptProps) => {
   };
 
   const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "enter") {
+    if (e.key === "Enter") {
       e.preventDefault();
       handleSubmit();
     }
