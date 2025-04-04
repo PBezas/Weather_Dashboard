@@ -5,11 +5,11 @@ const UserPrompt = ({ sumbitPrompt }: UserPromptProps) => {
   const [prompt, setPrompt] = useState("");
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setPrompt(e.target.value.toLowerCase());
+    setPrompt(e.target.value);
   };
 
   const handleSubmit = () => {
-    sumbitPrompt(prompt);
+    sumbitPrompt(prompt.toLowerCase());
     setPrompt("");
   };
 
