@@ -5,7 +5,8 @@ export const getCorrectValue = (
   weatherData: WeatherDataType
 ): string => {
   if (detail === "City:") {
-    return weatherData?.address;
+    const city = weatherData?.address;
+    return `${city.split('')[0].toUpperCase()}${city.slice(1)}` ;
   }
   if (detail === "Datetime:") {
     return weatherData?.currentConditions?.datetime;

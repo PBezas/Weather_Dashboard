@@ -13,7 +13,7 @@ const WeatherDisplay = ({ weatherData }: WeatherDisplayProps) => {
             className="border border-gray-300 p-2 rounded-xl flex justify-start"
           >
             <span className="font-bold">{detail}</span>
-            <span className="font-bold text-blue-700 ml-10">
+            <span className="w-[250px]  flex justify-center font-bold text-blue-500 absolute ml-30">
               {weatherDetail ? weatherDetail : ""}
             </span>
           </div>
@@ -21,7 +21,7 @@ const WeatherDisplay = ({ weatherData }: WeatherDisplayProps) => {
       })}
       <div className="border border-gray-300 p-2 rounded-xl flex justify-start h-[100px]">
         <span className="font-bold">Description:</span>
-        <span className="font-bold text-blue-700 ml-5">
+        <span className="font-bold text-blue-500 ml-5">
           {weatherData?.description}
         </span>
       </div>
